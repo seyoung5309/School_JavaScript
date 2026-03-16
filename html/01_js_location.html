@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!--반응형 웹에 사용-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트의 삽입 위치</title>
+    <!--1. head에 script 작성-->
+    <script>
+        // 윈도우 객체 아래에.
+        window.document.write("Hello World! - 3");
+    </script>
+</head>
+
+<body>
+    <p>Hello World! - 1</p>
+    <h2>Hello World! - 2</h2>
+
+    <!--2. body에 script 작성-->
+    <script>
+        document.write("Hello World! - 4")
+    </script>
+
+    <!--3. 외부 파일에서 지정-->
+    <script src="./js/01_js_location.js"></script>
+
+    <br><br>
+    <button style="width: 300px; height: 300px;" onclick="functionMy()">제출</button>
+</body>
+
+</html>
