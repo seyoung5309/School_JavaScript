@@ -33,7 +33,71 @@
         console.log((x /= y));
         console.log((x %= y));
 
-        // 3. 
+        // 3. 비교 연산자 : 데이터의 값을 비교 
+        // > < >= <= == === != !== 
+        x = 3;
+        console.log(typeof (x))
+        y = "3";
+        console.log(typeof (y));
+        console.log(x == y, x === y); // 값 비교: 유연성(장점과 단점) \ 값과 타입 비교 
+
+        console.log(x != y, x !== y);
+
+        // 4. 산술 연산자 ++(증가) --(감소) +(숫자화) -(단항 부정) ---------- 이런 거 시험 문제 
+        x = 5;
+        y = ++x;
+        console.log(x);
+        console.log(y);
+
+        x = 5;
+        y = x++
+        console.log(x); // 6 -- 이런 거 시험 문제로 낸다. 
+        console.log(y); // 5
+
+        y = --x;
+        console.log(x); // 5
+        console.log(y); // 5
+
+        y = x--;
+        console.log(x); // 4
+        console.log(y); // 5
+
+        x = -3;
+        console.log(x); // -3
+        console.log(-x); // 3
+
+        x = "7"; // string 
+        y = +x; // number
+        console.log("=====")
+        console.log(typeof (x))
+        console.log(typeof (y))
+        console.log(x)
+        console.log(y)
+        console.log(x === y)
+
+        console.log("=====")
+        // prompr로 두 수를 입력받아 합을 구하는 코드 작성
+        // perseInt
+        let num1 = +prompt("첫 번째 숫자를 입력하세요 : ");
+        let num2 = +prompt("두 번째 숫자를 입력하세요 : ");
+        console.log(num1 + num2);
+
+        // 5. 논리 연산자 : 여러 조건이 함께 있을 때 참인지 거짓인지 판별하는 것 (AND(&&), OR(||))
+        // - & : 앞에 조건이 맞더라도 뒤도 비교 
+
+        let o = true && false; // false
+        console.log(o)
+        o = 3 > 2 && 4 > 7; // false
+        console.log(o)
+        o = 3 > 2 && 8 > 7; // true
+        console.log(o)
+        o = true || false; // true
+        console.log(o)
+        o = 3 > 2 || 4 > 7; // true
+        console.log(o)
+        o = 3 > 4 || 4 < 2 || 2 > 1; // true
+        console.log(o)
+
     </script>
 </body>
 
