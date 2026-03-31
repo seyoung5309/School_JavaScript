@@ -11,14 +11,20 @@
     <script>
         let age = +prompt("나이를 입력하세요 : ");
         let money = 0;
-        if (age > 6 && age < 12) {
-            money = 450;
-        } else if (age < 18) {
-            money = 700;
-        } else if (age < 70) {
-            money = 1000;
+
+        if (age) { // age가 존재하면
+            if (age > 6 && age < 12) {
+                money = 450;
+            } else if (age < 18) {
+                money = 700;
+            } else if (age < 70) {
+                money = 1000;
+            }
+            console.log("나이에 따른 버스 비용은 ", money, "원 입니다.");
+        } else {
+            console.log("입력값 없습니다.");
         }
-        console.log(money);
+
     </script>
 </body>
 
