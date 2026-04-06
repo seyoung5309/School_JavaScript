@@ -315,11 +315,13 @@
 
 - for 과 break : break를 만나면 반복문 블럭을 중단하고 블럭을 빠져나온다.
 
-- for 과 continue
+- for 과 continue : continue를 만나면, 그 단계는 진행하지 않고, 다음 step으로 넘어간다. 
 
 1-1. for ~ in
 
 - 특징
+  - 배열: object에서 많이 사용
+  - 그러나 배열에서 인덱스가 중요한 것은 아니므로 주로 객체에서 사용한다. 
 - 실습(12_for_in.html)
 
 1-2. for ~ of
