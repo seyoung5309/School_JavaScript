@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        switch
+         - Date() 객체 : 날짜와 시간을 다루는 객체
+         - 
+        */
+       //Date() 객체를 통해서 now라는 인스턴스 객체 생성
+       const now = new Date();
+       console.log(now);
+       const dayName = now.getDay(); //요일을 리턴. 0=> 일요일, 1 => 월요일... 금요일 => 5, 토 => 6
+       console.log(dayName)
+
+       //switch로 데이네임을 짜는 코드
+/*
+       let today = " ";
+
+       switch (dayName) {
+        case 1:
+            today = "월";
+            break;
+        case 2:
+            today = "화";
+            break;
+        case 3:
+            today = "수";
+            break;
+        case 4:
+            today = "목";
+            break;
+        case 5:
+            today = "금";
+            break;
+        case 6:
+            today = "토";
+            break;
+        case 0:
+            today = "일";
+            break;
+        default:
+       }
+       console.log(today+"요일");*/
+
+       let today = ["일", "월", "화", "수", "목", "금", "토"];
+       console.log("오늘은 "+ today[now.getDay()] +"요일입니다.");
+
+    </script>
+</body>
+</html>

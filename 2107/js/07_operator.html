@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        //1. 할당 연산자
+        let x = 1;
+        let y = x; //1
+
+        x = x+y; //2
+        console.log(x);
+        x = x-y; //1
+        console.log(x);
+        x = x*y; //1
+        console.log(x);
+        x = x/y; //1
+        console.log(x);
+
+        x = 5;
+        y = 2; 
+        let z = x % y; //나머지 : 1
+        console.log(z);
+
+        x = 3;
+        y = 2;
+        z = x ** y; //제곱 : 9
+        console.log(z);
+
+        //2. 복합할당 연산자 : +=, -=, \*=, /=, %=
+        x = 3;
+        y = 4;
+        x += y; //7
+        console.log(x);
+        x -= y; //3
+        console.log(x);
+        x *= y; //12
+        console.log(x);
+        x /= y; //3
+        console.log(x);
+        x %= y; //3
+        console.log(x);
+
+        //3. 비교연산자 : 데이터의 값을 비교
+        //종류: (==, ===, !=, !==, >, >=, <, <=)
+        x = 3;
+        console.log(typeof x);
+        y = "3";
+        console.log(typeof y);
+        console.log(x == y); //true, 값비교 => 유연성 => 장점, 단점
+        console.log(x === y);//false, 타입비교
+
+        console.log(x != y);//false
+        console.log(x !== y);//true
+        
+        //4. 산술연산자 ++(증가) --(감소) +(숫자화) -(단항부정)
+        x = 5;
+        y = ++x;
+        console.log(x);  //6
+        console.log(y);  //6
+        x = 5;
+        y = x++;
+        console.log(x); //6
+        console.log(y); //5
+        y = --x;
+        console.log(x); //5
+        console.log(y); //5
+        y = x--;
+        console.log(x); //4
+        console.log(y); //5
+
+        x = -3;
+        console.log(x); //-3
+        console.log(-x); //3
+        x = "7";
+        y = +x;
+        console.log(typeof x); //string
+        console.log(typeof y); //number
+        console.log(x);
+        console.log(y);
+        console.log(x === y);
+
+        //활용 : prompt로 두수를 입력받아 합을 구하는 코드 작성
+        let input_1 = +prompt("정수를 입력하세요 : ")
+        let input_2 = +prompt("정수를 입력하세요 : ")
+        let result = input_1 + input_2;
+        console.log (result);
+
+        //5. 논리연산자 : 여러조건이 함께일때 true인지 false인지 구별하는 연산자 - ... &&(and:하나라도 flase면 다 false) ||(or : 하나라도 true면 다 true)
+        let o = true && false; //false
+        console.log(o);
+        o = 3 > 2 && 4 > 7; //false
+        console.log(o);
+        o = 3 > 2 && 8 > 7; //true
+        console.log(o);
+        o = true || false; //true
+        console.log(o);
+        o = 3 > 2 || 4 > 7; //true
+        console.log(o);
+        o = 3 > 4 || 4 < 2 || 2 > 1; //true
+        console.log(o);
+
+        //6. 문자열 연산자 : + (concate)
+        let firstName = "John";
+        let lastName = "Bacon";
+        let fullName =  firstName + lastName;
+        console.log(fullName);
+
+        //7. 삼항 연산자 : 조건 ? 참 : 거짓;
+        let age = 16;
+        let isAdult = age >= 20 ? "성인" : "미성년자";
+        console.log(isAdult);
+
+        //활용 :  90점 이상 = A, 80점 이상 = B, 70점 이상 = C, 60점 이상 = D, else = E;
+        //반드시 산항연산자, prompt 입력
+        let inputGrade = +prompt("점수를 입력하세요 : ")
+        let grade = inputGrade >= 90 ? "A" : inputGrade >= 80 ? "B" : inputGrade >= 70 ? "C" : inputGrade >= 60 ? "D" : "E";
+        console.log(grade);
+    </script>
+</body>
+</html>

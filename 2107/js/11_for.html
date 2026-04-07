@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let brands = ["아이폰", "구글", "마이크로소프트", "삼성", "아마존", "테슬라"]
+        console.log(brands[0]);
+        console.log(brands[1]);
+        console.log(brands[2]);
+        console.log(brands[3]);
+        console.log(brands[4]);
+        console.log(brands[5]);
+        for(let i = 0; i <= brands.length; i++){
+            console.log(brands[i]);
+        }
+        
+        /*실습 : 자판기 에서 음료를 구입하는 프로그림 작성 
+    (돈이 들어오면 구입이 가능한 음료수 목록 보여주기)*/
+    const drinktlist = [
+        { name: "오렌지 주스", price: 1000 },
+        { name: "파워에이드", price: 1200 },
+        { name: "커피", price: 700 },
+        { name: "보리차", price: 1200 },
+        { name: "코카콜라", price: 1800 },
+    ];
+    let inputCoin = 1000;
+    let drinkSize = drinktlist.length;
+    let availableDrink = []; //구입가능 음료수 목록
+
+    for(let i=0; i < drinkSize; i++){
+        let drink = drinktlist[i] // 원배열에서 객체를 하나씩 불러와 임시 저장하는 변수
+        //console.log(drink)
+        if(inputCoin >= drink.price){
+           // console.log("구입가능한 음료 : " + drink.name)
+           availableDrink.push(drink);
+        }
+    }
+    console.log("구입가능한 음료 : " + availableDrink)
+
+    for(let i = 0; i < 10; i++){
+        if (i == 5){
+            break;
+        }
+        if (i == 2){
+            continue;
+        }
+        console.log(i)
+    }
+    </script>
+</body>
+</html>
