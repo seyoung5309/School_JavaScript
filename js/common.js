@@ -9,7 +9,10 @@ function taxAmount(productPrice) {
   return productPrice * tax;
 }
 
+/**
+ * 한국 부자
+ * @returns
+ */
 function getTop5() {
-	return ['a', 'b', 'c', 'd'];
+  return ["a", "b", "c", "d"];
 }
-
