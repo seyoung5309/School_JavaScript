@@ -31,7 +31,8 @@
       console.log(str.lastIndexOf("Seoul"));
       //   console.log(str.lastIndexOf("Seoul", str.lastIndexOf("Seoul") - 1));
 
-      // 4. slice() : 문자열을 (시작위치, 마지막 위치 - 1) 만큼 잘라내기
+      // 4. (중요) slice() : 문자열을 (시작위치, 마지막 위치 - 1) 만큼 잘라내기
+      // (가장 늦게 나온 내장함수)
       str = "Welcome Seoul";
       console.log(str.slice(8, 13));
       console.log(str.slice(-5, -2));
@@ -54,9 +55,52 @@
       console.log(year, month, day);
 
       /* slice vs substring vs substr
-        substring : slice와 유사하지만 인덱스가 음인인 경우 처리가 다르다. 
+        substring : slice와 유사하지만 인덱스가 음수인 경우 처리가 다르다. 
         substr : 인덱스가 아닌 글자 수를 기준으로 하지만 현재 웹 표준으로 권장하지 않는다. 
     */
+
+      // 7. replace(str1, str2) : str1을 str2로 교체하는 함수
+      str = "Welcome Jeju! Jeju";
+      while (str.indexOf("Jeju") != -1) {
+        str = str.replace("Jeju", "Seoul");
+      }
+      console.log(str);
+
+      // 정규식(regular expression) : 특정한 포맷을 맞출 때
+
+      // (중요) 8. toUpperCase() : 대문자로 변환
+      // (중요) 9. toLowerCase() : 소문자로 변환
+      // 입력된 내용을 대(소)문자로 변환한다.
+
+      console.log(str.toUpperCase());
+      console.log(str.toLowerCase());
+
+      // 10. concat() : 여러 열 합치기, 합칠 문자열의 갯수에는 제한이 없다.
+      let fristName = "John";
+      let lastName = "Doe";
+      let fullName = fristName.concat(" ", lastName, ". ", "Nice to Meet you");
+      console.log(fullName);
+
+      // 11. trim() : 문자열의 앞, 뒤 공백 없애기
+      // const middleTrim = () => {};
+      let name = "        에이스? 2학년 1반 ";
+      console.log(name.trim().middleTrim);
+
+      // 12. (매우 중요) padStart(문자열 전체 길이, 채울 문자열) : 현업에서 가장 많이 사용하는 함수 중 하나
+      // 특정 문자로 앞을 채둔다.
+      month = prompt();
+      console.log(month.padStart(2, "0"));
+      // if (month > 0 && month < 13) {
+      //   if (month < 10) {
+      //     console.log("0" + String(month));
+      //   } else {
+      //     console.log(month);
+      //   }
+      // } else {
+      //   console.log("범위를 초과하였습니다.");
+      // }
+
+      // 13. padEnd(문자열 전체 길이, 채울 문자열) : 거의 사용하지 않는다.
     </script>
   </body>
 </html>
