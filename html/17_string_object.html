@@ -55,9 +55,9 @@
       console.log(year, month, day);
 
       /* slice vs substring vs substr
-        substring : slice와 유사하지만 인덱스가 음수인 경우 처리가 다르다. 
-        substr : 인덱스가 아닌 글자 수를 기준으로 하지만 현재 웹 표준으로 권장하지 않는다. 
-    */
+          substring : slice와 유사하지만 인덱스가 음수인 경우 처리가 다르다.
+          substr : 인덱스가 아닌 글자 수를 기준으로 하지만 현재 웹 표준으로 권장하지 않는다.
+      */
 
       // 7. replace(str1, str2) : str1을 str2로 교체하는 함수
       str = "Welcome Jeju! Jeju";
@@ -88,7 +88,7 @@
 
       // 12. (매우 중요) padStart(문자열 전체 길이, 채울 문자열) : 현업에서 가장 많이 사용하는 함수 중 하나
       // 특정 문자로 앞을 채둔다.
-      month = prompt();
+      // month = prompt();
       console.log(month.padStart(2, "0"));
       // if (month > 0 && month < 13) {
       //   if (month < 10) {
@@ -101,6 +101,50 @@
       // }
 
       // 13. padEnd(문자열 전체 길이, 채울 문자열) : 거의 사용하지 않는다.
+
+      // 14. charAt(인덱스) : 인덱스에 해당하는 글자 하나를 리턴
+      str = "A000001";
+      if (str.charAt(0) === "A") {
+        console.log("안녕하세요. 관리자님");
+      }
+
+      // 15. charCodeAt(인덱스) : 인덱스에 해당하는 글자 유니코드를 리턴
+      str = "힣";
+      console.log(str.charCodeAt(0));
+      str = "가";
+      console.log(str.charCodeAt(0));
+      str = "A000001";
+      console.log(str.charCodeAt(0));
+
+      // 16. split() : 파리미터로 전달받은 문자열을 기준으로 문자열을 쪼갠다.
+      let emails = "s2525@e-mirim.hs.kr,leenight5309@naver.com";
+      let email = emails.split(","); // 서버로부어 json형식으로 이메일이 전송되어 온다고 가정하자.
+      console.log(email); //( = return 타입은 배열이다.)
+
+      // 17. ** startsWith() : 파라미터로 시작하는지 여부를 boolean으로 반환
+      let url = "website.com";
+      console.log(url.startsWith("https://"));
+      if (url.startsWith("https://")) {
+        console.log("유효하다.");
+      } else {
+        console.log("유효하지 않다.");
+      }
+
+      // https:// 위의 주소가 적절한 웹 사이트 주소인지 팔별해보기. => 코드
+      let url_input = prompt();
+      if (url_input) {
+        if (url_input.indexOf("https://") === 0) {
+          console.log("유효한 웹 사이트 주소입니다.", url_input);
+        } else if (url_input.indexOf("http://") === 0) {
+          console.log("유효한 웹 사이트 주소입니다.", url_input);
+        } else {
+          console.log("유효하지 않은 웹 사이트 주소입니다.");
+        }
+      } else {
+        console.log("웹 사이트 주소를 입력해주세요.");
+      }
+
+      // 18. endsWith() : 파라미터로 종료하는지 여부를 boolean으로 반환
     </script>
   </body>
 </html>
