@@ -1,129 +1,131 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <script src="../js/common.js"></script>
     <script>
-      let test = "commit 잘 되나";
-      /*
-            함수 선언 방식
-            function 함수이름 ( 매개변수1, 매개변수2, ...) {
-                ...
-                (return)
-            }
+        let test = "commit 잘 되나";
+        /*
+              함수 선언 방식
+              function 함수이름 ( 매개변수1, 매개변수2, ...) {
+                  ...
+                  (return)
+              }
+  
+              - 선언 전 호출이 가능하다.
+              - 브라우저 엔진이 메모리 로딩하는 순서
+              1. 선언 함수
+              2. 전역 변수
+              3. 나머지는 순서대로
+              */
+        console.log(sum(5, 9));
 
-            - 선언 전 호출이 가능하다.
-            - 브라우저 엔진이 메모리 로딩하는 순서
-            1. 선언 함수
-            2. 전역 변수
-            3. 나머지는 순서대로
-            */
-      console.log(sum(5, 9));
-
-      function sum(n1, n2) {
-        return n1 + n2;
-      }
-
-      console.log(sum(4, 8));
-
-      //   function taxAmount(productPrice) {
-      //     let tax = 0.1;
-      //     return productPrice * tax;
-      //   }
-
-      //   function taxAmount(productPrice) {
-      //     let tax = 0.1;
-      //     return productPrice * tax;
-      //   }
-
-      console.log(taxAmount(13400));
-      console.log(getTop5());
-
-      // 2. 함수 표현식: 변수에 함수를 할당, 변수명이 함수명처럼 사용, 선언 전에 사용이 불가능
-      const sum2 = function (n1, n2) {
-        return n1 + n2;
-      };
-      console.log(sum2(5, 6));
-
-      /* 3. 화살표 함수
-        - 실무에서 가장 많이 사용
-        - 변수에 함수를 할당, 변수명이 함수명처럼 사용
-        - function 사용 안함, (매개변수) => {}
-        - return 문이 있고, 한 줄로 되엉 ㅣㅆ다면 return 과 {} 생략 가능
-        */
-      const sum3 = (n1, n2) => n1 + n2;
-
-      console.log(sum3(5, 6));
-
-      const tax = (test = (productPrice) => {
-        let tax = 0.1;
-        return productPrice * tax;
-      });
-
-      function getTop5() {
-        return ["a", "b", "c", "d"];
-      }
-
-      // 4. Function()
-      //숫자 2개, 연산자를 입력 받아 연산을 실행하는 함수(calculator)를 작성해보자
-      let n1 = 9;
-      let n2 = 63;
-      let op = "+"; //+, -, *, /, %
-
-      console.log("===== 연산");
-      console.log(calculator(n1, n2, op));
-      console.log(calculator(n1, n2, "-"));
-      console.log(calculator(n1, n2, "*"));
-      console.log(calculator(n1, n2, "/"));
-      console.log(calculator(n1, n2, "%"));
-
-      function calculator(n1, n2, op) {
-        if (op === "+") {
-          return n1 + n2;
-        } else if (op === "-") {
-          return n1 - n2;
-        } else if (op === "*") {
-          return n1 * n2;
-        } else if (op === "/") {
-          return n1 / n2;
-        } else if (op === "%") {
-          return n1 % n2;
-        } else {
-          return "연산자가 잘못되었습니다.";
+        function sum(n1, n2) {
+            return n1 + n2;
         }
-      }
 
-      // function calculator(n1, n2, op) {
-      //   switch (op) {
-      //     case "+":
-      //       return n1 + n2;
-      //       break;
-      //     case "-":
-      //       return n1 - n2;
-      //       break;
-      //     case "*":
-      //       return n1 * n2;
-      //       break;
-      //     case "/":
-      //       return n1 / n2;
-      //       break;
-      //     default:
-      //       return n1 % n2;
-      //   }
-      // }
+        console.log(sum(4, 8));
 
-      // 4. Function() - 완성?
-      const calculator2 = Function("n1", "n2", "return n1 + n2");
-      console.log(calculator2(3, 4));
+        //   function taxAmount(productPrice) {
+        //     let tax = 0.1;
+        //     return productPrice * tax;
+        //   }
 
-      op = "*";
-      const calculator3 = Function("n1", "n2", "return n1" + op + "n2");
-      console.log(calculator3(3, 4));
+        //   function taxAmount(productPrice) {
+        //     let tax = 0.1;
+        //     return productPrice * tax;
+        //   }
+
+        console.log(taxAmount(13400));
+        console.log(getTop5());
+
+        // 2. 함수 표현식: 변수에 함수를 할당, 변수명이 함수명처럼 사용, 선언 전에 사용이 불가능
+        const sum2 = function (n1, n2) {
+            return n1 + n2;
+        };
+        console.log(sum2(5, 6));
+
+        /* 3. 화살표 함수
+          - 실무에서 가장 많이 사용
+          - 변수에 함수를 할당, 변수명이 함수명처럼 사용
+          - function 사용 안함, (매개변수) => {}
+          - return 문이 있고, 한 줄로 되엉 ㅣㅆ다면 return 과 {} 생략 가능
+          */
+        const sum3 = (n1, n2) => n1 + n2;
+
+        console.log(sum3(5, 6));
+
+        const tax = (test = (productPrice) => {
+            let tax = 0.1;
+            return productPrice * tax;
+        });
+
+        function getTop5() {
+            return ["a", "b", "c", "d"];
+        }
+
+        // 4. Function()
+        //숫자 2개, 연산자를 입력 받아 연산을 실행하는 함수(calculator)를 작성해보자
+        let n1 = 9;
+        let n2 = 63;
+        let op = "+"; //+, -, *, /, %
+
+        console.log("===== 연산");
+        console.log(calculator(n1, n2, op));
+        console.log(calculator(n1, n2, "-"));
+        console.log(calculator(n1, n2, "*"));
+        console.log(calculator(n1, n2, "/"));
+        console.log(calculator(n1, n2, "%"));
+
+        function calculator(n1, n2, op) {
+            if (op === "+") {
+                return n1 + n2;
+            } else if (op === "-") {
+                return n1 - n2;
+            } else if (op === "*") {
+                return n1 * n2;
+            } else if (op === "/") {
+                return n1 / n2;
+            } else if (op === "%") {
+                return n1 % n2;
+            } else {
+                return "연산자가 잘못되었습니다.";
+            }
+        }
+
+        // function calculator(n1, n2, op) {
+        //   switch (op) {
+        //     case "+":
+        //       return n1 + n2;
+        //       break;
+        //     case "-":
+        //       return n1 - n2;
+        //       break;
+        //     case "*":
+        //       return n1 * n2;
+        //       break;
+        //     case "/":
+        //       return n1 / n2;
+        //       break;
+        //     default:
+        //       return n1 % n2;
+        //   }
+        // }
+
+        // 4. Function() - 완성?
+        const calculator2 = Function("n1", "n2", "return n1 + n2");
+        console.log(calculator2(3, 4));
+
+        op = "*";
+        const calculator3 = Function("n1", "n2", "return n1" + op + "n2");
+        console.log(calculator3(3, 4));
     </script>
-  </body>
+</body>
+
 </html>

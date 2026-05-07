@@ -36,13 +36,13 @@
 
         // 알고 싶은 키를 입력받고, 키에 대한 값을 출력하는 코드
         let person = {
-            name : "홍길동",
-            age : 22,
-            tel : "010-0000-1111",
-            city : "Seoul",
+            name: "홍길동",
+            age: 22,
+            tel: "010-0000-1111",
+            city: "Seoul",
         };
 
-        
+
         let input = prompt("키를 입력하세요: ");
         let check = 0;
         if (!input) {
@@ -52,7 +52,7 @@
                 if (key === input) {
                     check = 1;
                 }
-            }        
+            }
             if (check) {
                 console.log(input, ":", person[input]);
             } else {
