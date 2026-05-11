@@ -8,7 +8,36 @@
   <body>
     <script>
       // 1. slice 실무 활용 에제
+
+      // 1-1 긴 텍스트를 "더보기" 처리
+      const longString =
+        "자바스크립트 실무 마스터: 기초에서 심화까지 한 번에 끝내기";
+      const truncateTitle = (title, maxLength) => {
+        if (title.length > maxLength) {
+          return title.slice(0, maxLength) + "..." + "더보기";
+        } else {
+          return title;
+        }
+      };
+      console.log(truncateTitle(longString, 10));
+
+      // 1-2 전화 번호 뒷자리 ****로 마스킹 처리
+      const phoneNumber1 = "010-1234-5678";
+      const hiddenNumber = phoneNumber1.slice(0, -4) + "****";
+      console.log(hiddenNumber);
+
       // 2. replace 실무 활용 예제 (with 정규식(regular expression))
+
+      // 2-1 전화번호를 입력 받아 DB에 저장
+      const phoneNumber2 = "010-1234-5678";
+      let clearNumber = phoneNumber2; //.replace("-", "").replace("-", "");
+
+      while (clearNumber.indexOf("-") > -1) {
+        clearNumber = clearNumber.replace("-", "");
+      }
+
+      console.log(clearNumber);
+
       // 3. padStart 실무 활용 예제
       // 4. charAt 실무 활용 예제
       // 5. split 실무 활용 예제
