@@ -30,11 +30,18 @@
 
       // 2-1 전화번호를 입력 받아 DB에 저장
       const phoneNumber2 = "010-1234-5678";
-      let clearNumber = phoneNumber2; //.replace("-", "").replace("-", "");
+      let clearNumber = phoneNumber2.replace(/\D/g, "");
 
-      while (clearNumber.indexOf("-") > -1) {
-        clearNumber = clearNumber.replace("-", "");
-      }
+      /* 정규식
+        - / / 사이에 작성
+        - \ 는 아니다를 의미함.
+        - D 는 숫자를 의미함 : \D => 숫자가 아닌 것
+        - option : g => 모두 
+      */
+
+      // while (clearNumber.indexOf("-") > -1) {
+      //   clearNumber = clearNumber.replace("-", "");
+      // }
 
       console.log(clearNumber);
 
