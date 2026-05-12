@@ -31,12 +31,14 @@
       // 2-1 전화번호를 입력 받아 DB에 저장
       const phoneNumber2 = "010-1234-5678";
       let clearNumber = phoneNumber2.replace(/\D/g, "");
+      let str = "Welcome Jeju!! Jeju!!";
+      console.log(str.replace(/Jeju/g, "Seoul"));
 
       /* 정규식
         - / / 사이에 작성
         - \ 는 아니다를 의미함.
         - D 는 숫자를 의미함 : \D => 숫자가 아닌 것
-        - option : g => 모두 
+        - option : g => 모두
       */
 
       // while (clearNumber.indexOf("-") > -1) {
@@ -46,6 +48,13 @@
       console.log(clearNumber);
 
       // 3. padStart 실무 활용 예제
+      // 3-1 쇼핑 사이트에서 주문 번호나 회원번호를 생성하고 관리하기 편하도록
+      let memberNumber = 234;
+      const generateMemberNumber = (number, digit) => {
+        return "MN-".concat(number.padStart(digit, "0"));
+      };
+      console.log(generateMemberNumber(String(memberNumber), 6)); // 8, 000234
+
       // 4. charAt 실무 활용 예제
       // 5. split 실무 활용 예제
       // 6. endsWith 실무 활용 예제
